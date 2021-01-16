@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
-import HostId from './HostId';
-import { data } from '../../../testdata';
-import styled from 'styled-components';
+import React from 'react';
 
 const HostSection = () => {
-  const [ host, setHost ] = useState(data);
   return (
-    <div>
-      <HostId host={host} />
-    </div>
+    <div>Loaded</div>
   );
 };
 
