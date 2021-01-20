@@ -26,4 +26,8 @@ dist/
 public/
 
 .env
+<<<<<<< HEAD
 testdata.js
+=======
+testdata.js
+>>>>>>> a42d1aa... Import test data and inital component
