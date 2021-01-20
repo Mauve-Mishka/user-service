@@ -14,6 +14,7 @@ const monthTable = {
   Oct: 'October',
   Nov: 'November',
   Dec: 'December',
+<<<<<<< HEAD
 };
 
 const HostDetails = ({ name, date }) => {
@@ -28,3 +29,6 @@ const HostDetails = ({ name, date }) => {
 };
 
 export default HostDetails;
+=======
+};
+>>>>>>> af72e1d... Init HostDetails component with props and month translation object
