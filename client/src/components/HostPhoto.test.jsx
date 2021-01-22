@@ -5,7 +5,7 @@ import HostPhoto from './HostPhoto';
 
 describe('HostPhoto', () => {
 
-  test('renders an image', () => {
+  test('should render an image', () => {
 
     const props = {
       img: 'http://placekitten.com/75/75'

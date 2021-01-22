@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import HostId from './HostId';
+import HostDetails from './HostDetails';
+import HostPhoto from './HostPhoto';
 
-describe('HostDetails', () => {
+describe('HostId', () => {
 
   const props = {
     host: {
@@ -12,7 +14,7 @@ describe('HostDetails', () => {
     }
   };
 
-  test('should render host name', () => {
+  test('should render host avatar', () => {
 
     const { getByRole } = render(<HostId {...props} />);
     const imgNode = getByRole('img');
