@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import HostId from './HostId';
-import HostDetails from './HostDetails';
-import HostPhoto from './HostPhoto';
 
 describe('HostId', () => {
 
