@@ -23,7 +23,20 @@ const HostSectionContainer = styled.section`
 const SectionInnerContainer = styled.div`
   margin: 0 auto;
   max-width: 1128px;
+  position: relative;
   width: 100%;
+`;
+
+const Divider = styled.div`
+  background-color: #dddddd;
+  height: 1px;
+  left: 0;
+  top: -24px;
+  width: 100%;
+  position: absolute;
+  @media (min-width: ${query.medium}) {
+    top: -48px;
+  }
 `;
 
 const TwoColumn = styled.div`
@@ -70,6 +83,7 @@ const HostSection = () => {
   return (
     <HostSectionContainer>
       <SectionInnerContainer>
+        <Divider />
         <HostId host={host} />
         <TwoColumn>
           <div className='col-one'>
