@@ -10,11 +10,12 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "NODE_ENV=production webpack",
-    "client-dev": "NODE_ENV=development webpack -w",
+    "client-dev": "NODE_ENV=production webpack -w",
     "test": "jest",
     "seed": "node server/database/seed.js"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.5.0",
     "aws-sdk": "^2.828.0",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",

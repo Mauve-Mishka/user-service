@@ -28,7 +28,7 @@ const HostCommunications = ({ languages = [], responseRate, responseTime }) => {
     return languageList;
   };
 
-  const hostLanguages = languagesArrayToString(languages);
+  const hostLanguages = languages.length ? languagesArrayToString(languages) : undefined;
 
   return (
     <HostCommunicationsContainer>

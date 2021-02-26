@@ -61,18 +61,15 @@ const defaultState = {
 const HostSection = () => {
   const [ host, setHost ] = useState(defaultState);
 
-  useEffect(() => {
-    const fetchHostData = async (id) => {
-      const res = await axios.get(`/users/${id}`);
-      setHost(res.data);
-    };
-    fetchHostData(window.location.pathname.split('/')[2]);
+  useEffect(async () => {
+    const id = window.location.pathname.split('/')[2];
+    const { data } = await axios.get(`/users/${id}`);
+    setHost(data);
   }, []);
 
   return (
     <HostSectionContainer>
       <SectionInnerContainer>
-
         <HostId host={host} />
         <TwoColumn>
           <div className='col-one'>
