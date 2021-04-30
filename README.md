@@ -1,41 +1,12 @@
-# User Profile
+# Airbnb User Service Clone
 
-> This repo is a clone of the User Profile service from an AirBnb room listing page.
+This service displays host information for the current room, with varying layout and UI elements based on the data. Built using React, Node, Express, MongoDB and Amazon S3. Testing with Jest and React Testing Library. Deployed to Amazon EC2.
 
 ## Related Projects
 
-  - https://github.com/Mauve-Mishka/title-service
-  - https://github.com/Mauve-Mishka/photos-service
-  - https://github.com/Mauve-Mishka/summary-service
-  - https://github.com/Mauve-Mishka/amenities-service
-  - https://github.com/Mauve-Mishka/availability-service
   - https://github.com/Mauve-Mishka/more-places-service
+  - https://github.com/Mauve-Mishka/header
+  - https://github.com/Mauve-Mishka/sam-proxy
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
-
+ 
+![Airbnb User service](https://fec-gnocchi-user-profile.s3-us-west-2.amazonaws.com/airbnb-user.png)
