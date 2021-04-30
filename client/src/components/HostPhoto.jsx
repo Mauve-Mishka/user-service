@@ -1,7 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+const { styled } = window;
 import PropTypes from 'prop-types';
 import { query } from '../utils';
+
+const HostPhotoContainer = styled.div`
+  position: relative;
+  .super-badge {
+    bottom: 4px;
+    height: 24px;
+    position: absolute;
+    right: 14px;
+  }
+`;
 
 const CirclePhoto = styled.img`
   border-radius: 50%;
@@ -18,13 +28,12 @@ const CirclePhoto = styled.img`
   }
 `;
 
-const HostPhoto = ({ img }) => {
+const HostPhoto = ({ img, isSuperhost }) => {
   return (
-    <div>
-      <a href='#'>
-        <CirclePhoto src={img} />
-      </a>
-    </div>
+    <HostPhotoContainer>
+      <CirclePhoto src={img} />
+      {isSuperhost && <img className='super-badge' src='https://fec-gnocchi-user-profile.s3-us-west-2.amazonaws.com/airbnb-badge.png' />}
+    </HostPhotoContainer>
   );
 };
 

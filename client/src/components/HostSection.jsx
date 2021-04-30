@@ -4,14 +4,14 @@ import HostStats from './HostStats';
 import HostDescription from './HostDescription';
 import HostCommunications from './HostCommunications';
 import Security from './Security';
-import styled from 'styled-components';
+const { styled } = window;
 import axios from 'axios';
 import { query } from '../utils';
 
 const HostSectionContainer = styled.section`
   font-family: "Roboto";
   padding: 32px 24px;
-  width: auto;
+  width: 100vw;
   @media (min-width: ${query.medium}) {
     padding: 48px 40px;
   }
@@ -23,6 +23,7 @@ const HostSectionContainer = styled.section`
 const SectionInnerContainer = styled.div`
   margin: 0 auto;
   max-width: 1128px;
+  position: relative;
   width: 100%;
 `;
 
@@ -61,18 +62,15 @@ const defaultState = {
 const HostSection = () => {
   const [ host, setHost ] = useState(defaultState);
 
-  useEffect(() => {
-    const fetchHostData = async (id) => {
-      const res = await axios.get(`/users/${id}`);
-      setHost(res.data);
-    };
-    fetchHostData(window.location.pathname.split('/')[2]);
+  useEffect(async () => {
+    const id = window.location.pathname.split('/')[2];
+    const { data } = await axios.get(`/users/${id}`);
+    setHost(data);
   }, []);
 
   return (
     <HostSectionContainer>
       <SectionInnerContainer>
-
         <HostId host={host} />
         <TwoColumn>
           <div className='col-one'>

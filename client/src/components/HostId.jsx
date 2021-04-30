@@ -1,7 +1,7 @@
 import React from 'react';
 import HostPhoto from './HostPhoto';
 import HostDetails from './HostDetails';
-import styled from 'styled-components';
+const { styled } = window;
 import PropTypes from 'prop-types';
 import { query } from '../utils';
 
@@ -20,8 +20,8 @@ const HostIdContainer = styled.div`
 const HostId = ({ host }) => {
   return (
     <HostIdContainer>
-      <HostDetails name={host.name} date={host.joinDate}/>
-      <HostPhoto img={host.avatarUrl}/>
+      <HostDetails name={host.name} date={host.joinDate} />
+      <HostPhoto img={host.avatarUrl} isSuperhost={host.isSuperhost} />
     </HostIdContainer>
   );
 };

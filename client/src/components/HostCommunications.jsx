@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+const { styled } = window;
 import Button from './Button';
 import PropTypes from 'prop-types';
 
@@ -28,7 +28,7 @@ const HostCommunications = ({ languages = [], responseRate, responseTime }) => {
     return languageList;
   };
 
-  const hostLanguages = languagesArrayToString(languages);
+  const hostLanguages = languages.length ? languagesArrayToString(languages) : undefined;
 
   return (
     <HostCommunicationsContainer>
