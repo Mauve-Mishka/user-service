@@ -1,6 +1,8 @@
 # Airbnb User Service Clone
 
-This service displays host information for the current room, with varying layout and UI elements based on the data. Components are responsive with mobile-first styling. Built using React, Node, Express, MongoDB and Amazon S3. Testing with Jest and React Testing Library. Deployed to Amazon EC2.
+This service displays host information for the current room, with varying layout and UI elements based on the data. Components are responsive with mobile-first styling. 
+
+Built using React, Node, Express, MongoDB and Amazon S3. Testing with Jest and React Testing Library. Deployed to Amazon EC2.
 
 ## Related Projects
 
