@@ -31,7 +31,7 @@ const CirclePhoto = styled.img`
 const HostPhoto = ({ img, isSuperhost }) => {
   return (
     <HostPhotoContainer>
-      <CirclePhoto src={img} />
+      {img && <CirclePhoto src={img} />}
       {isSuperhost && <img className='super-badge' src='https://fec-gnocchi-user-profile.s3-us-west-2.amazonaws.com/airbnb-badge.png' />}
     </HostPhotoContainer>
   );

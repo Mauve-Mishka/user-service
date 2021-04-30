@@ -26,7 +26,7 @@ const Cohost = ({ avatarUrl, name }) => {
   return (
     <CohostContainer>
       <a href='#'>
-        <CohostPhoto src={avatarUrl} />
+        {avatarUrl && <CohostPhoto src={avatarUrl} />}
       </a>
       <CohostName>{ name }</CohostName>
     </CohostContainer>
