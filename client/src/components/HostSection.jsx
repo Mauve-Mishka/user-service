@@ -11,7 +11,7 @@ import { query } from '../utils';
 const HostSectionContainer = styled.section`
   font-family: "Roboto";
   padding: 32px 24px;
-  width: auto;
+  width: 100vw;
   @media (min-width: ${query.medium}) {
     padding: 48px 40px;
   }
@@ -25,18 +25,6 @@ const SectionInnerContainer = styled.div`
   max-width: 1128px;
   position: relative;
   width: 100%;
-`;
-
-const Divider = styled.div`
-  background-color: #dddddd;
-  height: 1px;
-  left: 0;
-  top: -24px;
-  width: 100%;
-  position: absolute;
-  @media (min-width: ${query.medium}) {
-    top: -48px;
-  }
 `;
 
 const TwoColumn = styled.div`
@@ -83,7 +71,6 @@ const HostSection = () => {
   return (
     <HostSectionContainer>
       <SectionInnerContainer>
-        <Divider />
         <HostId host={host} />
         <TwoColumn>
           <div className='col-one'>
